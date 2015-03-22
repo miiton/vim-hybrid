@@ -79,6 +79,7 @@ if has("gui_running")
   let s:foreground = "#c5c8c6"
   let s:selection  = "#373b41"
   let s:line       = "#282a2e"
+  let s:linenr     = "#484a4e"
   let s:comment    = "#707880"
   let s:red        = "#cc6666"
   let s:orange     = "#de935f"
@@ -182,6 +183,7 @@ exe "let s:fg_foreground = ' ".s:vmode."fg=".s:foreground."'"
 exe "let s:fg_background = ' ".s:vmode."fg=".s:background."'"
 exe "let s:fg_selection  = ' ".s:vmode."fg=".s:selection ."'"
 exe "let s:fg_line       = ' ".s:vmode."fg=".s:line      ."'"
+exe "let s:fg_linenr     = ' ".s:vmode."fg=".s:linenr    ."'"
 exe "let s:fg_comment    = ' ".s:vmode."fg=".s:comment   ."'"
 exe "let s:fg_red        = ' ".s:vmode."fg=".s:red       ."'"
 exe "let s:fg_orange     = ' ".s:vmode."fg=".s:orange    ."'"
@@ -281,7 +283,7 @@ exe "hi! Folded"        .s:fg_comment     .s:bg_darkcolumn  .s:fmt_none
 exe "hi! FoldColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_darkcolumn  .s:fmt_none
 "		Incsearch"
-exe "hi! LineNr"        .s:fg_selection   .s:bg_none        .s:fmt_none
+exe "hi! LineNr"        .s:fg_linenr      .s:bg_none        .s:fmt_none
 exe "hi! CursorLineNr"  .s:fg_yellow      .s:bg_none        .s:fmt_none
 exe "hi! MatchParen"    .s:fg_background  .s:bg_changebg    .s:fmt_none
 exe "hi! ModeMsg"       .s:fg_green       .s:bg_none        .s:fmt_none
